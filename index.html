@@ -8,22 +8,29 @@
   <meta name="keywords" content="дизайн студия подбор мебели аксессуары европейский текстиль интерьер">
   <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/montserrat-medium.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <title>Scandi</title>
 </head>
 
 <body>
   <header class="header">
     <div class="container header__container">
-      <a href="index.html" class="header__logo" aria-label="Ссылка на главную страницу">
-        <picture>
-          <source type="image/webp" srcset="files/webp/logo.webp">
-          <img class="header__logo-image" src="files/logo.png" alt="Scandi">
-        </picture>
-        Scandi
-      </a>
       <nav class="header__nav nav">
-        <ul class="nav__list">
+        <a href="index.html" class="header__logo" aria-label="Ссылка на главную страницу">
+          <picture>
+            <source type="image/webp" srcset="files/webp/logo.webp">
+            <img class="header__logo-image" src="files/logo.png" alt="Scandi">
+          </picture>
+          Scandi
+        </a>
+        <button class="nav__btn menu__button" type="button" aria-label="Open site menu" aria-expanded="false"
+          aria-controls="menu__list">
+          <svg class=" menu__icon" aria-hidden="true" width="32" height="32">
+            <use class="menu__icon-menu" href="img/menu-btn.svg#menu"></use>
+            <use class="menu__icon-cross" href="img/menu-btn.svg#cross"></use>
+          </svg>
+        </button>
+        <ul class="nav__list menu__list" id="menu__list">
           <li class=" nav__item">
             <a href="#about" class="nav__link">О компании</a>
           </li>
@@ -43,16 +50,16 @@
             <a href="#application" class="nav__link">Оставить заявку</a>
           </li>
         </ul>
+        <div class="nav__contacts">
+          <a href="tel:+79818574624">+7 (981) 857-46-24</a>
+        </div>
       </nav>
-      <div class="header__contact">
-        <a href="tel:+79818574624">+7 (981) 857-46-24</a>
-      </div>
     </div>
   </header>
   <main>
     <h1 class="visually-hidden">Дизайн студия Scandi</h1>
     <section class="intro" id="top">
-      <div class="container container--narrow">
+      <div class="container container--narrow intro__container">
         <h2 class="intro__title">Поможем сделать вашу квартиру уютнее</h2>
         <p class="intro__descr">Подбираем текстиль, мебель и&nbsp;аксессуары под ваш интерьер, находим магазины
           и&nbsp;помогаем
@@ -96,6 +103,11 @@
       <div class="container portfolio__container">
         <h2 class="portfolio__title title">Наши работы</h2>
         <article class="portfolio__item work">
+          <div class="work__top">
+            <h3 class="work__title">Квартира-студия 30 кв.м.</h3>
+            <p class="work__descr">В квартире были светлые стены и&nbsp;тёплые цвета. Мы сконцентрировались на
+              отсылках к природе и&nbsp;сделали ребятам уютный интерьер, отсылающий к виллам островов Бали.</p>
+          </div>
           <div class="work__row work__row">
             <figure class="work__photo-content">
               <picture>
@@ -111,10 +123,10 @@
             <figure class="work__photo-content">
               <picture>
                 <source type="image/webp" srcset="files/webp/work-2.webp">
-                <img class="work__photo" src="files/work-2.jpg" alt="Квартира-студия 30 кв.м.">
+                <img class="work__photo" src="files/work-2.jpg" alt="Кухня">
               </picture>
               <figcaption class="work__caption">
-                <h3 class="work__title">Квартира-студия 30 кв.м.</h3>
+                <h3 class="work__title">Кухня</h3>
                 <p class="work__descr">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные
                   тексты. Ты, рукопись пунктуация речью путь, сбить инициал букв, всеми текста себя рыбного выйти
                   журчит. Вершину если подпоясал однажды она рукописи?</p>
@@ -125,10 +137,10 @@
             <figure class="work__photo-content">
               <picture>
                 <source type="image/webp" srcset="files/webp/work-3.webp">
-                <img class="work__photo" src="files/work-3.jpg" alt="Квартира-студия 30 кв.м.">
+                <img class="work__photo" src="files/work-3.jpg" alt="Комната">
               </picture>
               <figcaption class="work__caption">
-                <h3 class="work__title">Квартира-студия 30 кв.м.</h3>
+                <h3 class="work__title">Комната</h3>
                 <p class="work__descr">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные
                   тексты. Дал послушавшись ее языкового сбить от всех одна своих имени языком, себя продолжил! Страну
                   всеми, подпоясал предложения рыбного рот журчит решила.</p>
@@ -137,10 +149,10 @@
             <figure class="work__photo-content">
               <picture>
                 <source type="image/webp" srcset="files/webp/work-4.webp">
-                <img class="work__photo" src="files/work-4.jpg" alt="Квартира-студия 30 кв.м.">
+                <img class="work__photo" src="files/work-4.jpg" alt="Ванная">
               </picture>
               <figcaption class="work__caption">
-                <h3 class="work__title">Квартира-студия 30 кв.м.</h3>
+                <h3 class="work__title">Ванная</h3>
                 <p class="work__descr">Далеко-далеко за словесными горами, в стране гласных и согласных живут рыбные
                   тексты. Приставка, по всей предложения. Даже имеет рот, свой знаках но оксмокс, проектах приставка
                   ipsum выйти маленький осталось. Составитель буквенных послушавшись моей?</p>
@@ -246,10 +258,12 @@
             все
             вопросы.</p>
           <form class="application__form">
-            <input class="application__input" type="text" name="Имя" aria-label="Введите имя" placeholder="Введите имя"
-              required>
-            <input class="application__input" type="tel" name="Телефон" aria-label="Введите телефон"
-              data-mask="+7 000 000 00 00" placeholder="Введите телефон" required>
+            <div class="application__inputs">
+              <input class="application__input" type="text" name="Имя" aria-label="Введите имя"
+                placeholder="Введите имя" required>
+              <input class="application__input" type="tel" name="Телефон" aria-label="Введите телефон"
+                data-mask="+7 000 000 00 00" placeholder="Введите телефон" required>
+            </div>
             <button class="application__btn btn" type="submit">Оставить заявку</button>
           </form>
         </div>
@@ -261,7 +275,7 @@
           </picture>
           <iframe class="application__map" tabindex="-1"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.299527610291!2d30.322432600651485!3d59.93879499729869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1615454369571!5m2!1sru!2sru"
-            width="590" height="624" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
       </div>
     </section>
@@ -269,7 +283,8 @@
   <footer class="footer">
     <div class="container footer__container">
       <a href="tel:+79818574624" class="footer__phone">+7 (981) 857-46-24</a>
-      <p class="footer__adress">г. Санкт-петербург, ул. Большая Конюшенная, 19</p>
+      <p class="footer__adress">г. Санкт-петербург,<br class="footer__break"> ул.&nbsp;Большая&nbsp;Конюшенная,&nbsp;19
+      </p>
       <p class="footer__copyright">ИП Королёва А.А.</p>
     </div>
   </footer>
