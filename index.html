@@ -15,14 +15,14 @@
 <body>
   <header class="header">
     <div class="container header__container">
+      <a href="index.html" class="header__logo" aria-label="Ссылка на главную страницу">
+        <picture>
+          <source type="image/webp" srcset="files/webp/logo.webp">
+          <img class="header__logo-image" src="files/logo.png" alt="Scandi">
+        </picture>
+        Scandi
+      </a>
       <nav class="header__nav nav">
-        <a href="index.html" class="header__logo" aria-label="Ссылка на главную страницу">
-          <picture>
-            <source type="image/webp" srcset="files/webp/logo.webp">
-            <img class="header__logo-image" src="files/logo.png" alt="Scandi">
-          </picture>
-          Scandi
-        </a>
         <button class="nav__btn menu__button" type="button" aria-label="Open site menu" aria-expanded="false"
           aria-controls="menu__list">
           <svg class=" menu__icon" aria-hidden="true" width="32" height="32">
@@ -50,10 +50,10 @@
             <a href="#application" class="nav__link">Оставить заявку</a>
           </li>
         </ul>
-        <div class="nav__contacts">
-          <a href="tel:+79818574624">+7 (981) 857-46-24</a>
-        </div>
       </nav>
+      <div class="header__contacts">
+        <a href="tel:+79818574624">+7 (981) 857-46-24</a>
+      </div>
     </div>
   </header>
   <main>
@@ -218,35 +218,80 @@
       <div class="container container--narrow">
         <h2 class="testimonials__title title">Отзывы</h2>
         <div class="testimonials__slider">
-          <ul class="testimonials__list">
-            <li class="testimonials__item">
-              <blockquote class="testimonials__quotes">
-                <p class="testimonials__quote">Восторг! Спасибо, за комфортную жизнь. Очень рада, что выбрала вашу
-                  студию для украшения своего дома.</p>
-                <p class="testimonials__quote">Работа шла быстро, было очень приятно общаться и&nbsp;взаимодествовайть
-                  с сотрудниками. Не ожидала, что это будет так легко!</p>
-                <p class="testimonials__quote">Буду советовать и&nbsp;своим друзьям к&nbsp;вам обращаться!</p>
-                <footer class="testimonials__author">Анна Беловская</footer>
-              </blockquote>
-              <figure class="testimonial__caption">
-                <picture>
-                  <source type="image/webp" srcset="files/webp/review-1.webp">
-                  <img class="testimonials__photo" src="files/review-1.jpg" alt="Фото дизайна">
-                </picture>
-                <picture>
-                  <source type="image/webp" srcset="files/webp/review-2.webp">
-                  <img class="testimonials__photo" src="files/review-2.jpg" alt="Фото дизайна">
-                </picture>
-                <figcaption class="visually-hidden">Фотографии дизайна интерьера квартиры</figcaption>
-              </figure>
-            </li>
-          </ul>
+          <div class="testimonials__slider-content swiper-container">
+            <ul class="testimonials__list swiper-wrapper">
+              <li class="testimonials__item swiper-slide">
+                <blockquote class="testimonials__quotes">
+                  <p class="testimonials__quote">Восторг! Спасибо, за комфортную жизнь. Очень рада, что выбрала вашу
+                    студию для украшения своего дома.</p>
+                  <p class="testimonials__quote">Работа шла быстро, было очень приятно общаться и&nbsp;взаимодествовайть
+                    с сотрудниками. Не ожидала, что это будет так легко!</p>
+                  <p class="testimonials__quote">Буду советовать и&nbsp;своим друзьям к&nbsp;вам обращаться!</p>
+                  <footer class="testimonials__author">Анна Беловская</footer>
+                </blockquote>
+                <figure class="testimonial__caption">
+                  <picture>
+                    <source type="image/webp" srcset="files/webp/review-1.webp">
+                    <img class="testimonials__photo" src="files/review-1.jpg" alt="Фото дизайна">
+                  </picture>
+                  <picture>
+                    <source type="image/webp" srcset="files/webp/review-2.webp">
+                    <img class="testimonials__photo" src="files/review-2.jpg" alt="Фото дизайна">
+                  </picture>
+                  <figcaption class="visually-hidden">Фотографии дизайна интерьера квартиры</figcaption>
+                </figure>
+              </li>
+              <li class="testimonials__item swiper-slide">
+                <blockquote class="testimonials__quotes">
+                  <p class="testimonials__quote">Восторг! Спасибо, за комфортную жизнь. Очень рада, что выбрала вашу
+                    студию для украшения своего дома.</p>
+                  <p class="testimonials__quote">Работа шла быстро, было очень приятно общаться и&nbsp;взаимодествовайть
+                    с сотрудниками. Не ожидала, что это будет так легко!</p>
+                  <p class="testimonials__quote">Буду советовать и&nbsp;своим друзьям к&nbsp;вам обращаться!</p>
+                  <footer class="testimonials__author">Анна Беловская</footer>
+                </blockquote>
+                <figure class="testimonial__caption">
+                  <picture>
+                    <source type="image/webp" srcset="files/webp/review-1.webp">
+                    <img class="testimonials__photo" src="files/review-1.jpg" alt="Фото дизайна">
+                  </picture>
+                  <picture>
+                    <source type="image/webp" srcset="files/webp/review-2.webp">
+                    <img class="testimonials__photo" src="files/review-2.jpg" alt="Фото дизайна">
+                  </picture>
+                  <figcaption class="visually-hidden">Фотографии дизайна интерьера квартиры</figcaption>
+                </figure>
+              </li>
+              <li class="testimonials__item swiper-slide">
+                <blockquote class="testimonials__quotes">
+                  <p class="testimonials__quote">Восторг! Спасибо, за комфортную жизнь. Очень рада, что выбрала вашу
+                    студию для украшения своего дома.</p>
+                  <p class="testimonials__quote">Работа шла быстро, было очень приятно общаться и&nbsp;взаимодествовайть
+                    с сотрудниками. Не ожидала, что это будет так легко!</p>
+                  <p class="testimonials__quote">Буду советовать и&nbsp;своим друзьям к&nbsp;вам обращаться!</p>
+                  <footer class="testimonials__author">Анна Беловская</footer>
+                </blockquote>
+                <figure class="testimonial__caption">
+                  <picture>
+                    <source type="image/webp" srcset="files/webp/review-1.webp">
+                    <img class="testimonials__photo" src="files/review-1.jpg" alt="Фото дизайна">
+                  </picture>
+                  <picture>
+                    <source type="image/webp" srcset="files/webp/review-2.webp">
+                    <img class="testimonials__photo" src="files/review-2.jpg" alt="Фото дизайна">
+                  </picture>
+                  <figcaption class="visually-hidden">Фотографии дизайна интерьера квартиры</figcaption>
+                </figure>
+              </li>
+            </ul>
+          </div>
           <div class="testimonials__controls">
-            <button class="btn testimonials__btn testimonials__btn--prev"
+            <button class="btn testimonials__btn testimonials__btn--prev swiper-button-prev"
               aria-label="кнопка переключения слайда назад"></button>
-            <button class="btn testimonials__btn testimonials__btn--next"
+            <button class="btn testimonials__btn testimonials__btn--next swiper-button-next"
               aria-label="кнопка переключения слайда вперед"></button>
           </div>
+          <div class="testimonials__bullets swiper-pagination"></div>
         </div>
       </div>
     </section>
@@ -292,6 +337,7 @@
     <a href="#top" aria-label="к началу страницы"></a>
   </div>
   <script src="libs/jquery-3.5.1.min.js"></script>
+  <script src="libs/swiper.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 

@@ -1,4 +1,5 @@
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+@import "../libs/swiper.min.css";
 html {
   line-height: 1.15;
 
@@ -342,6 +343,14 @@ input[type="checkbox"].visually-hidden {
   font-size: 16px;
   line-height: 20px;
 }
+.header__container {
+  display: grid;
+  align-items: center;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  grid-template-columns: 1fr 1fr 1fr;
+}
 .header__logo {
   display: grid;
   align-items: center;
@@ -358,6 +367,12 @@ input[type="checkbox"].visually-hidden {
   width: 26px;
   height: 25px;
 }
+.header__contacts {
+  display: grid;
+  margin-left: 35px;
+
+  grid-auto-flow: row;
+}
 .nav {
   position: relative;
 
@@ -372,7 +387,6 @@ input[type="checkbox"].visually-hidden {
 .nav__list {
   display: grid;
   justify-content: end;
-  margin-left: auto;
 
           column-gap: 26px;
 
@@ -406,19 +420,13 @@ input[type="checkbox"].visually-hidden {
 .nav__link:hover::after {
   width: 100%;
 }
-.nav__contacts {
-  display: grid;
-  margin-left: 35px;
-
-  grid-auto-flow: row;
-}
 .menu__button {
   display: none;
 }
 .nav__btn {
   position: absolute;
-  top: 0;
-  right: 20px;
+  top: -30px;
+  right: 10px;
   z-index: 3;
 }
 .intro {
@@ -721,9 +729,6 @@ input[type="checkbox"].visually-hidden {
 
   padding: 0 103px;
 }
-.testimonials__list {
-  overflow: hidden;
-}
 .testimonials__item {
   display: grid;
 
@@ -775,6 +780,7 @@ input[type="checkbox"].visually-hidden {
 
   width: 72px;
   height: 72px;
+  margin-top: 0;
 
   background-color: var(--button-bg-color);
   background-repeat: no-repeat;
@@ -793,6 +799,29 @@ input[type="checkbox"].visually-hidden {
   right: 0;
 
   background-image: url("data:image/svg+xml,%3Csvg width='33' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M32.707 8.707a1 1 0 000-1.414L26.343.929a1 1 0 10-1.414 1.414L30.586 8l-5.657 5.657a1 1 0 001.414 1.414l6.364-6.364zM0 9h32V7H0v2z' fill='%23F5F2ED'/%3E%3C/svg%3E");
+}
+.testimonials__bullets {
+  right: 0;
+  bottom: -30px;
+  left: 0;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: "";
+}
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+
+  background-color: var(--button-bg-color);
+  outline: none;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background-color: var(--hover-effect-color);
+}
+.swiper-pagination-bullet + .swiper-pagination-bullet {
+  margin-left: 10px;
 }
 .application {
   color: var(--alter-text-color);
@@ -950,14 +979,22 @@ input[type="checkbox"].visually-hidden {
   }
 }
 @media (max-width: 1280px) {
+  .header__container {
+    display: grid;
+    align-items: center;
+
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    grid-template-columns: 1fr 1fr;
+  }
+  .header__contacts {
+    display: none;
+  }
   .nav__list {
             column-gap: 15px;
 
     -webkit-column-gap: 15px;
        -moz-column-gap: 15px;
-  }
-  .nav__contacts {
-    display: none;
   }
 }
 @media (max-width: 1024px) {
@@ -968,10 +1005,21 @@ input[type="checkbox"].visually-hidden {
   .title {
     margin-bottom: 20px;
   }
+  .header__container {
+    display: block;
+  }
+  .header__logo {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    align-self: center;
+
+    -ms-flex-item-align: center;
+  }
   .nav__list {
     position: absolute;
-    top: -5px;
-    right: 0;
+    top: -35px;
+    right: -10px;
 
     padding: 40px 0 10px;
     overflow: hidden;
